@@ -1,3 +1,63 @@
+# 🧘 Zenith Monitor - AI Focus Tracking Assistant
+
+> **Empower your concentration with AI. Make distractions visible.**
+
+Zenith Monitor is a futuristic productivity tool built with Computer Vision (AI) and system monitoring. It real-time tracks your posture, gaze, and screen content to intelligently determine if you're in a "Deep Work" state or "Slacking Off."
+
+---
+
+## ✨ Core Features
+
+*   **🤖 AI Gaze Tracking**: Powered by MediaPipe Face Mesh, it detects head orientation and eye direction in real-time.
+*   **📱 Glance Detection**: Optimized algorithms to catch "stealthy" phone usage. Even if your head remains still, looking down triggers a focus penalty.
+*   **🖥️ Active Window Monitoring**: Real-time integration with macOS to identify the frontmost app. Slacking apps like YouTube, Bilibili, or Steam cause scores to plummet instantly.
+*   **📊 Cyberpunk Dashboard**: A premium, glassmorphic web UI with smooth animations and instant visual alerts.
+*   **🔌 Smart Heartbeat**: Backend automatically releases system resources and ports 30 seconds after the webpage is closed.
+
+## 🛠️ Tech Stack
+
+*   **Backend**: Python 3.12 + FastAPI
+*   **Vision Engine**: MediaPipe Face Landmarker (Tasks API)
+*   **Frontend**: HTML5 + Vanilla CSS3 (Glassmorphism) + JavaScript
+*   **System Bridge**: AppleScript (for macOS window tracking)
+
+---
+
+## 🚀 Quick Start (macOS)
+
+Designed for users with zero programming background.
+
+### 1. Prerequisites
+Ensure you have **Python 3** installed on your Mac.
+
+### 2. Launch the Project
+1. Clone or download this repository.
+2. Locate the file **`start.command`** in the project folder.
+3. **Double-click** to run. The script will automatically install dependencies, download the AI model, and open the dashboard in your browser.
+4. Grant **Camera** and **Accessibility** permissions when prompted.
+
+### 3. Usage
+*   **Green State**: Stay focused on the screen; scores remain above 80%.
+*   **Slacking Alerts**: Looking away, staring at your phone, or switching to recreational apps triggers the red **SLACKING DETECTED** warning.
+
+---
+
+## ⚙️ Customization
+
+Tailor the monitor to your needs:
+
+*   **Slacking Apps**: Edit the `self.slacking_apps` list in `screen_monitor.py`.
+*   **Sensitivity**: Adjust `yaw_threshold` or `eye_penalty` in `vision_engine.py`.
+
+---
+
+## 🔒 Privacy
+
+*   **100% Local**: All AI calculations are performed on your machine. **No** image or video data is ever uploaded to the cloud.
+*   **Open Source**: Transparent code for full auditability.
+
+---
+
 # 🧘 Zenith Monitor - AI 摸鱼监测助手
 
 > **用 AI 守护你的专注力，让摸鱼无所遁形。**
@@ -37,8 +97,7 @@ Zenith Monitor 是一款基于计算机视觉（AI）和系统监控的有趣工
 
 ### 3. 使用方法
 *   **绿色状态**: 盯着屏幕工作，分值保持在 80% 以上。
-*   **黄色状态**: 视线偶尔游离或正在进行轻微的干扰活动。
-*   **重复警报**: 当你完全看向侧面、低头玩手机或打开了预设的“摸鱼 App”时，屏幕会闪红并提示 **SLACKING DETECTED**。
+*   **复警报**: 当你完全看向侧面、低头玩手机或打开了预设的“摸鱼 App”时，屏幕会闪红并提示 **SLACKING DETECTED**。
 
 ---
 
@@ -54,7 +113,6 @@ Zenith Monitor 是一款基于计算机视觉（AI）和系统监控的有趣工
 ## 🔒 隐私声明
 
 *   本工具的所有 AI 运算均在本地完成，**不会**上传任何图像或视频数据到云端。
-*   代码完全透明，你可以随时查阅所有文件。
 
 ---
 
