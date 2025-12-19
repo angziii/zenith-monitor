@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+face_landmarker.task
+node_modules/
+.env

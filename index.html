@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti-Slacking AI Monitor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ZENITH <span class="accent">MONITOR</span></h1>
+            <p class="subtitle">AI-Powered Focus Tracking</p>
+        </header>
+
+        <main>
+            <div class="monitor-card glass">
+                <div class="focus-gauge-container">
+                    <svg class="progress-ring" width="240" height="240">
+                        <circle class="progress-ring__circle-bg" stroke="#1a1a2e" stroke-width="12" fill="transparent" r="100" cx="120" cy="120"/>
+                        <circle class="progress-ring__circle" stroke="#00d2ff" stroke-width="12" fill="transparent" r="100" cx="120" cy="120"/>
+                    </svg>
+                    <div class="focus-value-container">
+                        <span id="focus-score">0</span>
+                        <span class="unit">%</span>
+                        <span class="label">FOCUS</span>
+                    </div>
+                </div>
+
+                <div class="status-details">
+                    <div class="status-item">
+                        <span class="label">STATUS:</span>
+                        <span id="status-text" class="value">INITIALIZING...</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">ACTIVE APP:</span>
+                        <span id="active-app" class="value">SCANNING...</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">BIOMETRICS:</span>
+                        <span id="face-status" class="value">NO DATA</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="alert-banner" class="alert-banner hidden">
+                <div class="alert-content">
+                    <div class="alert-icon">⚠️</div>
+                    <div class="alert-text">
+                        <h3>SLACKING DETECTED</h3>
+                        <p>GET BACK TO WORK!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="system-logs">
+                <span class="pulse"></span> System Active
+            </div>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
